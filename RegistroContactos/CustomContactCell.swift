@@ -11,5 +11,7 @@ import UIKit
 class CustomContactCell: UITableViewCell {
 
     @IBOutlet weak var contactNameLabel: UILabel!
+    @IBOutlet weak var contactPhoneLabel: UILabel!
+    @IBOutlet weak var contactInfoLabel: UILabel!
     @IBOutlet weak var contactImage: UIView!
 }

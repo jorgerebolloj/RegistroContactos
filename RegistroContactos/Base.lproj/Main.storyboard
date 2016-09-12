@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -44,26 +45,52 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P4s-w7-BUM">
-                                                    <rect key="frame" x="8" y="8" width="477" height="83"/>
+                                                    <rect key="frame" x="8" y="8" width="477" height="39"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="39" id="qaO-DD-45G"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rZ1-5u-LBc">
+                                                    <rect key="frame" x="8" y="47" width="136" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="136" id="568-eg-GhX"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cJJ-CY-BiF">
+                                                    <rect key="frame" x="152" y="47" width="333" height="44"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="P4s-w7-BUM" firstAttribute="leading" secondItem="H1s-q9-38t" secondAttribute="leadingMargin" id="4Px-4F-Dgj"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="KSh-3b-bcD" secondAttribute="bottom" constant="-8" id="8jb-JU-rwm"/>
-                                                <constraint firstItem="KSh-3b-bcD" firstAttribute="trailing" secondItem="H1s-q9-38t" secondAttribute="trailingMargin" id="9xs-TJ-SyP"/>
-                                                <constraint firstItem="KSh-3b-bcD" firstAttribute="leading" secondItem="P4s-w7-BUM" secondAttribute="trailing" constant="8" id="OCx-A0-JpG"/>
-                                                <constraint firstItem="P4s-w7-BUM" firstAttribute="top" secondItem="H1s-q9-38t" secondAttribute="topMargin" id="OUq-eS-5yL"/>
-                                                <constraint firstItem="KSh-3b-bcD" firstAttribute="top" secondItem="H1s-q9-38t" secondAttribute="topMargin" constant="-8" id="Yqz-kR-Fvg"/>
-                                                <constraint firstItem="KSh-3b-bcD" firstAttribute="leading" secondItem="P4s-w7-BUM" secondAttribute="trailing" constant="8" id="eLo-Va-mhZ"/>
-                                                <constraint firstItem="P4s-w7-BUM" firstAttribute="bottom" secondItem="H1s-q9-38t" secondAttribute="bottomMargin" id="hRs-9b-4nK"/>
+                                                <constraint firstItem="rZ1-5u-LBc" firstAttribute="baseline" secondItem="cJJ-CY-BiF" secondAttribute="baseline" id="1UC-eJ-Jgo"/>
+                                                <constraint firstItem="cJJ-CY-BiF" firstAttribute="top" secondItem="P4s-w7-BUM" secondAttribute="bottom" id="9he-ab-ZWD"/>
+                                                <constraint firstItem="rZ1-5u-LBc" firstAttribute="firstBaseline" secondItem="cJJ-CY-BiF" secondAttribute="firstBaseline" id="HSU-wh-kDf"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="KSh-3b-bcD" secondAttribute="bottom" constant="-8" id="PBO-Ly-A8Z"/>
+                                                <constraint firstItem="KSh-3b-bcD" firstAttribute="leading" secondItem="cJJ-CY-BiF" secondAttribute="trailing" constant="8" id="Suq-o1-WWK"/>
+                                                <constraint firstItem="KSh-3b-bcD" firstAttribute="trailing" secondItem="H1s-q9-38t" secondAttribute="trailingMargin" id="TYg-0c-4my"/>
+                                                <constraint firstItem="KSh-3b-bcD" firstAttribute="top" secondItem="H1s-q9-38t" secondAttribute="topMargin" constant="-8" id="ZNV-VY-2ke"/>
+                                                <constraint firstItem="rZ1-5u-LBc" firstAttribute="leading" secondItem="P4s-w7-BUM" secondAttribute="leading" id="al5-ax-Hcz"/>
+                                                <constraint firstItem="KSh-3b-bcD" firstAttribute="leading" secondItem="P4s-w7-BUM" secondAttribute="trailing" constant="8" symbolic="YES" id="gSO-CL-aYh"/>
+                                                <constraint firstItem="KSh-3b-bcD" firstAttribute="leading" secondItem="cJJ-CY-BiF" secondAttribute="trailing" constant="8" id="m8s-om-VKJ"/>
+                                                <constraint firstItem="rZ1-5u-LBc" firstAttribute="leading" secondItem="H1s-q9-38t" secondAttribute="leadingMargin" id="uWK-Df-OUX"/>
+                                                <constraint firstItem="cJJ-CY-BiF" firstAttribute="bottom" secondItem="H1s-q9-38t" secondAttribute="bottomMargin" id="ueJ-2f-Od2"/>
+                                                <constraint firstItem="cJJ-CY-BiF" firstAttribute="leading" secondItem="rZ1-5u-LBc" secondAttribute="trailing" constant="8" symbolic="YES" id="xns-vb-gxN"/>
+                                                <constraint firstItem="P4s-w7-BUM" firstAttribute="top" secondItem="H1s-q9-38t" secondAttribute="topMargin" id="zNB-3n-hXK"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="contactImage" destination="KSh-3b-bcD" id="wws-N8-sjJ"/>
+                                            <outlet property="contactInfoLabel" destination="cJJ-CY-BiF" id="pJ9-qb-lnQ"/>
                                             <outlet property="contactNameLabel" destination="P4s-w7-BUM" id="pS8-b0-quL"/>
+                                            <outlet property="contactPhoneLabel" destination="rZ1-5u-LBc" id="L81-SS-Za4"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

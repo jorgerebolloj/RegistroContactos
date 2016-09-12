@@ -15,10 +15,10 @@ class ContactListViewController: UIViewController, UITableViewDataSource, UITabl
     var contacts = [NSManagedObject]()
     override func viewDidLoad() {
         super.viewDidLoad()
-        requestData()
     }
     
     override func viewWillAppear(animated: Bool) {
+        requestData()
         ContactListTableView.reloadData()
     }
 
@@ -34,6 +34,8 @@ class ContactListViewController: UIViewController, UITableViewDataSource, UITabl
     func requestData () {
         let mngdObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
         let request = NSFetchRequest(entityName: "Contactos")
+        let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
+        request.sortDescriptors = [sortDescriptor]
         
         do {
             let result = try mngdObjectContext.executeFetchRequest(request)
@@ -51,7 +53,10 @@ class ContactListViewController: UIViewController, UITableViewDataSource, UITabl
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell:CustomContactCell = tableView.dequeueReusableCellWithIdentifier("contactCell", forIndexPath: indexPath) as! CustomContactCell
         let contact = contacts[indexPath.row]
+        
         cell.contactNameLabel.text = contact.valueForKey("name") as? String
+        cell.contactPhoneLabel.text = contact.valueForKey("telephone") as? String
+        cell.contactInfoLabel.text = contact.valueForKey("personalInterest") as? String
         return cell
     }
 
