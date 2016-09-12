@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		304CDD7C1D8622410017D828 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304CDD7B1D8622410017D828 /* AppDelegate.swift */; };
-		304CDD7E1D8622410017D828 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304CDD7D1D8622410017D828 /* FirstViewController.swift */; };
-		304CDD801D8622410017D828 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304CDD7F1D8622410017D828 /* SecondViewController.swift */; };
+		304CDD7E1D8622410017D828 /* ContactListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304CDD7D1D8622410017D828 /* ContactListViewController.swift */; };
+		304CDD801D8622410017D828 /* NewContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304CDD7F1D8622410017D828 /* NewContactViewController.swift */; };
 		304CDD831D8622410017D828 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 304CDD811D8622410017D828 /* Main.storyboard */; };
 		304CDD851D8622410017D828 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 304CDD841D8622410017D828 /* Assets.xcassets */; };
 		304CDD881D8622410017D828 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 304CDD861D8622410017D828 /* LaunchScreen.storyboard */; };
@@ -19,8 +19,8 @@
 /* Begin PBXFileReference section */
 		304CDD781D8622400017D828 /* RegistroContactos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RegistroContactos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		304CDD7B1D8622410017D828 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		304CDD7D1D8622410017D828 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		304CDD7F1D8622410017D828 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		304CDD7D1D8622410017D828 /* ContactListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListViewController.swift; sourceTree = "<group>"; };
+		304CDD7F1D8622410017D828 /* NewContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewContactViewController.swift; sourceTree = "<group>"; };
 		304CDD821D8622410017D828 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		304CDD841D8622410017D828 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		304CDD871D8622410017D828 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,10 +58,10 @@
 		304CDD7A1D8622410017D828 /* RegistroContactos */ = {
 			isa = PBXGroup;
 			children = (
+				304CDD931D86745E0017D828 /* BusinessControllers */,
+				304CDD921D8674520017D828 /* ViewControllers */,
 				304CDD8F1D8642F80017D828 /* Resources */,
 				304CDD7B1D8622410017D828 /* AppDelegate.swift */,
-				304CDD7D1D8622410017D828 /* FirstViewController.swift */,
-				304CDD7F1D8622410017D828 /* SecondViewController.swift */,
 				304CDD811D8622410017D828 /* Main.storyboard */,
 				304CDD841D8622410017D828 /* Assets.xcassets */,
 				304CDD861D8622410017D828 /* LaunchScreen.storyboard */,
@@ -76,6 +76,22 @@
 				304CDD901D8643160017D828 /* splash.png */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		304CDD921D8674520017D828 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				304CDD7D1D8622410017D828 /* ContactListViewController.swift */,
+				304CDD7F1D8622410017D828 /* NewContactViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		304CDD931D86745E0017D828 /* BusinessControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = BusinessControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,9 +166,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				304CDD801D8622410017D828 /* SecondViewController.swift in Sources */,
+				304CDD801D8622410017D828 /* NewContactViewController.swift in Sources */,
 				304CDD7C1D8622410017D828 /* AppDelegate.swift in Sources */,
-				304CDD7E1D8622410017D828 /* FirstViewController.swift in Sources */,
+				304CDD7E1D8622410017D828 /* ContactListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
