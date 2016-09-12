@@ -17,12 +17,13 @@ class NewContactViewController: UIViewController, UITextFieldDelegate, UIPickerV
     @IBOutlet weak var personalInterestTextView: UITextView!
     @IBOutlet weak var addContactButton: UIButton!
     
+    var contacts = [NSManagedObject]()
+    
     var pickerContents:[[String]] = []
     let sexAndCivilStatus = ["Estado civil","Solter@","Casad@","Divorsiad@","Unión libre","Viud@","Otr@"]
     let sex = ["Sexo","Hombre","Mujer"]
     var sexSelected = ""
     var civilStatusSelected = ""
-    var contactos = [NSManagedObject]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -99,7 +100,11 @@ class NewContactViewController: UIViewController, UITextFieldDelegate, UIPickerV
     
     // returns the # of rows in each component..
     func pickerView(bigPicker: UIPickerView, numberOfRowsInComponent component: Int) -> Int{
-        return pickerContents[component].count
+        if component == 0 {
+            return pickerContents[component].count
+        } else {
+            return pickerContents[component].count
+        }
     }
     
     func pickerView(bigPicker: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?{
@@ -119,9 +124,10 @@ class NewContactViewController: UIViewController, UITextFieldDelegate, UIPickerV
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
     {
-        if row != 0 {
-            sexSelected = pickerContents[0][row]
-            civilStatusSelected = pickerContents[1][row]
+        if component == 0 && row != 0 {
+            sexSelected = pickerContents[component][row]
+        } else if component == 1 && row != 0 {
+            civilStatusSelected = pickerContents[component][row]
         } else {
             sexSelected = ""
             civilStatusSelected = ""
@@ -194,23 +200,35 @@ class NewContactViewController: UIViewController, UITextFieldDelegate, UIPickerV
     }
     
     @IBAction func addContactButtonAction(sender: AnyObject) {
-        tabBarController?.selectedIndex = 0
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        let managedContext = appDelegate.managedObjectContext
-        let entity =  NSEntityDescription.entityForName("Contactos", inManagedObjectContext:managedContext)
+        let alertController = UIAlertController (title: "Nuevo Contacto", message: "Agregar Contacto", preferredStyle:  UIAlertControllerStyle.Alert)
+        let storeContact = UIAlertAction(title: "Agregar", style: .Default) { (result : UIAlertAction) -> Void in
+            self.saveContact()
+            self.tabBarController?.selectedIndex = 0
+        }
+        let cancel = UIAlertAction(title: "Cancelar", style: .Default) { (result : UIAlertAction) -> Void in
+            
+        }
+        alertController.addAction(storeContact)
+        alertController.addAction(cancel)
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
+    
+    func saveContact () {
+        let mngdObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+        let entityDescription = NSEntityDescription.entityForName("Contactos", inManagedObjectContext: mngdObjectContext)
+        let contact = NSManagedObject(entity: entityDescription!, insertIntoManagedObjectContext: mngdObjectContext)
         
-        let contacto = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedContext)
-        contacto.setValue(nameTextField.text, forKey: "name")
-        contacto.setValue(phoneTextField.text, forKey: "telephone")
-        contacto.setValue(sexSelected, forKey: "sex")
-        contacto.setValue(civilStatusSelected, forKey: "civilStatus")
-        contacto.setValue(personalInterestTextView.text, forKey: "personalInterest")
+        contact.setValue(self.nameTextField.text, forKey:"name")
+        contact.setValue(self.phoneTextField.text, forKey:"telephone")
+        contact.setValue(self.civilStatusSelected, forKey:"civilStatus")
+        contact.setValue(self.sexSelected, forKey:"sex")
+        contact.setValue(self.personalInterestTextView.text, forKey:"personalInterest")
         
         do {
-            try managedContext.save()
-            contactos.append(contacto)
-        } catch let error as NSError  {
-            print("Could not save \(error), \(error.userInfo)")
+            try mngdObjectContext.save()
+            contacts.append(contact)
+        } catch let error as NSError {
+            print("No se pudo guardar el contacto, tipo de error \(error)")
         }
     }
     

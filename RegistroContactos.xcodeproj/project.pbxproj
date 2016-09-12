@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3045A6AF1D86F45C0031B111 /* CustomContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3045A6AE1D86F45C0031B111 /* CustomContactCell.swift */; };
 		304CDD7C1D8622410017D828 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304CDD7B1D8622410017D828 /* AppDelegate.swift */; };
 		304CDD7E1D8622410017D828 /* ContactListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304CDD7D1D8622410017D828 /* ContactListViewController.swift */; };
 		304CDD801D8622410017D828 /* NewContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304CDD7F1D8622410017D828 /* NewContactViewController.swift */; };
@@ -17,10 +18,10 @@
 		304CDD961D868E8D0017D828 /* ContactImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 304CDD941D868E8D0017D828 /* ContactImage.png */; };
 		304CDD971D868E8D0017D828 /* NewContactImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 304CDD951D868E8D0017D828 /* NewContactImage.png */; };
 		304CDD9A1D86D16A0017D828 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 304CDD981D86D16A0017D828 /* DataModel.xcdatamodeld */; };
-		304CDD9C1D86D7550017D828 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304CDD9B1D86D7550017D828 /* DataController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3045A6AE1D86F45C0031B111 /* CustomContactCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomContactCell.swift; sourceTree = "<group>"; };
 		304CDD781D8622400017D828 /* RegistroContactos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RegistroContactos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		304CDD7B1D8622410017D828 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		304CDD7D1D8622410017D828 /* ContactListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListViewController.swift; sourceTree = "<group>"; };
@@ -33,7 +34,6 @@
 		304CDD941D868E8D0017D828 /* ContactImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ContactImage.png; sourceTree = "<group>"; };
 		304CDD951D868E8D0017D828 /* NewContactImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NewContactImage.png; sourceTree = "<group>"; };
 		304CDD991D86D16A0017D828 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
-		304CDD9B1D86D7550017D828 /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +66,6 @@
 		304CDD7A1D8622410017D828 /* RegistroContactos */ = {
 			isa = PBXGroup;
 			children = (
-				304CDD931D86745E0017D828 /* BusinessControllers */,
 				304CDD921D8674520017D828 /* ViewControllers */,
 				304CDD8F1D8642F80017D828 /* Resources */,
 				304CDD7B1D8622410017D828 /* AppDelegate.swift */,
@@ -94,16 +93,9 @@
 			children = (
 				304CDD7D1D8622410017D828 /* ContactListViewController.swift */,
 				304CDD7F1D8622410017D828 /* NewContactViewController.swift */,
+				3045A6AE1D86F45C0031B111 /* CustomContactCell.swift */,
 			);
 			name = ViewControllers;
-			sourceTree = "<group>";
-		};
-		304CDD931D86745E0017D828 /* BusinessControllers */ = {
-			isa = PBXGroup;
-			children = (
-				304CDD9B1D86D7550017D828 /* DataController.swift */,
-			);
-			name = BusinessControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,10 +172,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				304CDD9C1D86D7550017D828 /* DataController.swift in Sources */,
 				304CDD801D8622410017D828 /* NewContactViewController.swift in Sources */,
 				304CDD9A1D86D16A0017D828 /* DataModel.xcdatamodeld in Sources */,
 				304CDD7C1D8622410017D828 /* AppDelegate.swift in Sources */,
+				3045A6AF1D86F45C0031B111 /* CustomContactCell.swift in Sources */,
 				304CDD7E1D8622410017D828 /* ContactListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

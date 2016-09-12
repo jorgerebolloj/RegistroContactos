@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="15G1004" minimumToolsVersion="Xcode 7.0">
-    <entity name="Contactos" syncable="YES">
+    <entity name="Contactos" representedClassName="." syncable="YES">
         <attribute name="civilStatus" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="personalInterest" optional="YES" attributeType="String" syncable="YES"/>
@@ -8,6 +8,6 @@
         <attribute name="telephone" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Contactos" positionX="-63" positionY="-18" width="128" height="120"/>
+        <element name="Contactos" positionX="-63" positionY="-18" width="128" height="118"/>
     </elements>
 </model>
