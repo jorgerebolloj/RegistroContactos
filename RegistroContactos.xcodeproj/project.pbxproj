@@ -58,7 +58,7 @@
 		304CDD7A1D8622410017D828 /* RegistroContactos */ = {
 			isa = PBXGroup;
 			children = (
-				304CDD8F1D8642F80017D828 /* Utilities */,
+				304CDD8F1D8642F80017D828 /* Resources */,
 				304CDD7B1D8622410017D828 /* AppDelegate.swift */,
 				304CDD7D1D8622410017D828 /* FirstViewController.swift */,
 				304CDD7F1D8622410017D828 /* SecondViewController.swift */,
@@ -70,12 +70,12 @@
 			path = RegistroContactos;
 			sourceTree = "<group>";
 		};
-		304CDD8F1D8642F80017D828 /* Utilities */ = {
+		304CDD8F1D8642F80017D828 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				304CDD901D8643160017D828 /* splash.png */,
 			);
-			name = Utilities;
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
