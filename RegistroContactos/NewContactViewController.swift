@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class NewContactViewController: UIViewController, UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate, UITextViewDelegate {
 
@@ -21,6 +22,7 @@ class NewContactViewController: UIViewController, UITextFieldDelegate, UIPickerV
     let sex = ["Sexo","Hombre","Mujer"]
     var sexSelected = ""
     var civilStatusSelected = ""
+    var contactos = [NSManagedObject]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -193,6 +195,23 @@ class NewContactViewController: UIViewController, UITextFieldDelegate, UIPickerV
     
     @IBAction func addContactButtonAction(sender: AnyObject) {
         tabBarController?.selectedIndex = 0
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let managedContext = appDelegate.managedObjectContext
+        let entity =  NSEntityDescription.entityForName("Contactos", inManagedObjectContext:managedContext)
+        
+        let contacto = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedContext)
+        contacto.setValue(nameTextField.text, forKey: "name")
+        contacto.setValue(phoneTextField.text, forKey: "telephone")
+        contacto.setValue(sexSelected, forKey: "sex")
+        contacto.setValue(civilStatusSelected, forKey: "civilStatus")
+        contacto.setValue(personalInterestTextView.text, forKey: "personalInterest")
+        
+        do {
+            try managedContext.save()
+            contactos.append(contacto)
+        } catch let error as NSError  {
+            print("Could not save \(error), \(error.userInfo)")
+        }
     }
     
     // Remove observers

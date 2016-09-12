@@ -16,6 +16,8 @@
 		304CDD911D8643160017D828 /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 304CDD901D8643160017D828 /* splash.png */; };
 		304CDD961D868E8D0017D828 /* ContactImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 304CDD941D868E8D0017D828 /* ContactImage.png */; };
 		304CDD971D868E8D0017D828 /* NewContactImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 304CDD951D868E8D0017D828 /* NewContactImage.png */; };
+		304CDD9A1D86D16A0017D828 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 304CDD981D86D16A0017D828 /* DataModel.xcdatamodeld */; };
+		304CDD9C1D86D7550017D828 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304CDD9B1D86D7550017D828 /* DataController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		304CDD901D8643160017D828 /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
 		304CDD941D868E8D0017D828 /* ContactImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ContactImage.png; sourceTree = "<group>"; };
 		304CDD951D868E8D0017D828 /* NewContactImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NewContactImage.png; sourceTree = "<group>"; };
+		304CDD991D86D16A0017D828 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		304CDD9B1D86D7550017D828 /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +73,7 @@
 				304CDD811D8622410017D828 /* Main.storyboard */,
 				304CDD841D8622410017D828 /* Assets.xcassets */,
 				304CDD861D8622410017D828 /* LaunchScreen.storyboard */,
+				304CDD981D86D16A0017D828 /* DataModel.xcdatamodeld */,
 				304CDD891D8622410017D828 /* Info.plist */,
 			);
 			path = RegistroContactos;
@@ -96,6 +101,7 @@
 		304CDD931D86745E0017D828 /* BusinessControllers */ = {
 			isa = PBXGroup;
 			children = (
+				304CDD9B1D86D7550017D828 /* DataController.swift */,
 			);
 			name = BusinessControllers;
 			sourceTree = "<group>";
@@ -174,7 +180,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				304CDD9C1D86D7550017D828 /* DataController.swift in Sources */,
 				304CDD801D8622410017D828 /* NewContactViewController.swift in Sources */,
+				304CDD9A1D86D16A0017D828 /* DataModel.xcdatamodeld in Sources */,
 				304CDD7C1D8622410017D828 /* AppDelegate.swift in Sources */,
 				304CDD7E1D8622410017D828 /* ContactListViewController.swift in Sources */,
 			);
@@ -328,8 +336,23 @@
 				304CDD8E1D8622410017D828 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		304CDD981D86D16A0017D828 /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				304CDD991D86D16A0017D828 /* DataModel.xcdatamodel */,
+			);
+			currentVersion = 304CDD991D86D16A0017D828 /* DataModel.xcdatamodel */;
+			name = DataModel.xcdatamodeld;
+			path = ../DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 304CDD701D8622400017D828 /* Project object */;
 }
