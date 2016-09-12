@@ -25,21 +25,33 @@
                                     <constraint firstAttribute="height" constant="29" id="NHa-lD-JWD"/>
                                 </constraints>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WCD-FF-cgm">
+                                <rect key="frame" x="0.0" y="28" width="600" height="523"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="LRA-BN-MQd">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LRA-BN-MQd" id="amY-Z9-Q9p">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="WCD-FF-cgm" secondAttribute="trailing" constant="-20" id="3gC-5H-L4X"/>
+                            <constraint firstItem="WCD-FF-cgm" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="8" id="El0-3g-cJd"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="WCD-FF-cgm" secondAttribute="bottom" id="JJH-M7-UR9"/>
                             <constraint firstItem="C10-93-eJN" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="-20" id="SwW-Kd-9QD"/>
                             <constraint firstItem="C10-93-eJN" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="topMargin" id="bYP-os-lza"/>
+                            <constraint firstItem="WCD-FF-cgm" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="-20" id="n5d-WB-pfd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="C10-93-eJN" secondAttribute="trailing" constant="-20" id="reH-GA-o39"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Lista de Contactos" image="ContactList" id="acW-dT-cKf">
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="color" keyPath="setUnselectedImage">
-                                <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Lista de Contactos" image="ContactList" id="acW-dT-cKf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
@@ -48,7 +60,7 @@
         <!--Nuevo Contacto-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="NewContactViewController" sceneMemberID="viewController">
+                <viewController id="8rJ-Kc-sve" customClass="NewContactViewController" customModule="RegistroContactos" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
                         <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
@@ -64,12 +76,63 @@
                                     <constraint firstAttribute="height" constant="29" id="afr-ST-bib"/>
                                 </constraints>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NewContactImage.png" translatesAutoresizingMaskIntoConstraints="NO" id="0EN-Wi-4e5">
+                                <rect key="frame" x="180" y="37" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="UbB-Af-iDE"/>
+                                    <constraint firstAttribute="width" constant="240" id="asX-GI-4Eu"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y86-Kr-maI">
+                                <rect key="frame" x="20" y="285" width="560" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="cWB-mv-ute"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="namePhonePad"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Teléfono" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DEv-V3-Ggl">
+                                <rect key="frame" x="20" y="323" width="560" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="UB0-Df-PX0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CDh-nk-ndr">
+                                <rect key="frame" x="20" y="448" width="560" height="95"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <attributedString key="attributedText"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xkG-Ax-q3A">
+                                <rect key="frame" x="20" y="361" width="560" height="79"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="79" id="TDU-Ah-S2n"/>
+                                </constraints>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="CDh-nk-ndr" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="36l-Iz-cNj"/>
+                            <constraint firstItem="0EN-Wi-4e5" firstAttribute="centerX" secondItem="DEv-V3-Ggl" secondAttribute="centerX" id="3AW-nV-x9w"/>
+                            <constraint firstItem="y86-Kr-maI" firstAttribute="trailing" secondItem="QS5-Rx-YEW" secondAttribute="trailingMargin" id="3LL-y7-Ffd"/>
+                            <constraint firstItem="0EN-Wi-4e5" firstAttribute="centerX" secondItem="ImZ-4j-kDM" secondAttribute="centerX" id="7mU-n9-0dZ"/>
                             <constraint firstItem="ImZ-4j-kDM" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="-20" id="DdT-yk-Vid"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ImZ-4j-kDM" secondAttribute="trailing" constant="-20" id="Fa9-g6-KBN"/>
+                            <constraint firstItem="0EN-Wi-4e5" firstAttribute="top" secondItem="ImZ-4j-kDM" secondAttribute="bottom" constant="8" symbolic="YES" id="IN2-pl-QDP"/>
                             <constraint firstItem="ImZ-4j-kDM" firstAttribute="top" secondItem="QS5-Rx-YEW" secondAttribute="topMargin" id="JWN-3n-9Xg"/>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="CDh-nk-ndr" secondAttribute="bottom" constant="8" id="NfH-JL-Ims"/>
+                            <constraint firstItem="y86-Kr-maI" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="Qj3-EU-Dvd"/>
+                            <constraint firstItem="CDh-nk-ndr" firstAttribute="trailing" secondItem="QS5-Rx-YEW" secondAttribute="trailingMargin" id="VRP-jU-oAR"/>
+                            <constraint firstItem="DEv-V3-Ggl" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="a3N-nS-jho"/>
+                            <constraint firstItem="xkG-Ax-q3A" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="gKl-Ke-mds"/>
+                            <constraint firstItem="xkG-Ax-q3A" firstAttribute="top" secondItem="DEv-V3-Ggl" secondAttribute="bottom" constant="8" id="hAR-xk-kz9"/>
+                            <constraint firstItem="y86-Kr-maI" firstAttribute="top" secondItem="0EN-Wi-4e5" secondAttribute="bottom" constant="8" symbolic="YES" id="jFu-VA-fFy"/>
+                            <constraint firstItem="DEv-V3-Ggl" firstAttribute="trailing" secondItem="QS5-Rx-YEW" secondAttribute="trailingMargin" id="lot-tV-zfk"/>
+                            <constraint firstItem="xkG-Ax-q3A" firstAttribute="trailing" secondItem="QS5-Rx-YEW" secondAttribute="trailingMargin" id="nTB-Xn-ktR"/>
+                            <constraint firstItem="CDh-nk-ndr" firstAttribute="top" secondItem="xkG-Ax-q3A" secondAttribute="bottom" constant="8" id="pTa-l9-kpx"/>
+                            <constraint firstItem="DEv-V3-Ggl" firstAttribute="top" secondItem="y86-Kr-maI" secondAttribute="bottom" constant="8" id="yPD-fh-URp"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Nuevo Contacto" image="NewContact" id="cPa-gy-q4n"/>
@@ -94,9 +157,6 @@
                             <userDefinedRuntimeAttribute type="color" keyPath="barTintColor">
                                 <color key="value" red="0.98039215686274506" green="0.82352941176470584" blue="0.30196078431372547" alpha="1" colorSpace="calibratedRGB"/>
                             </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="color" keyPath="setUnselectedImage">
-                                <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                            </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
@@ -112,5 +172,6 @@
     <resources>
         <image name="ContactList" width="30" height="30"/>
         <image name="NewContact" width="30" height="30"/>
+        <image name="NewContactImage.png" width="274" height="274"/>
     </resources>
 </document>
