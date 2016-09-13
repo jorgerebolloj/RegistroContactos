@@ -15,6 +15,7 @@ class ContactListViewController: UIViewController, UITableViewDataSource, UITabl
     var contacts = [NSManagedObject]()
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController!.navigationBar.barTintColor = UIColor.init(colorLiteralRed: 33/255, green: 208/255, blue: 195/255, alpha: 1.0)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -27,6 +28,7 @@ class ContactListViewController: UIViewController, UITableViewDataSource, UITabl
         // Dispose of any resources that can be recreated.
     }
     
+    // Set status bar color
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return UIStatusBarStyle.LightContent
     }

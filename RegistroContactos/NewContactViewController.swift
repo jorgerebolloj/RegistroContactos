@@ -27,6 +27,7 @@ class NewContactViewController: UIViewController, UITextFieldDelegate, UIPickerV
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController!.navigationBar.barTintColor = UIColor.init(colorLiteralRed: 33/255, green: 208/255, blue: 195/255, alpha: 1.0)
         nameTextField.delegate = self
         phoneTextField.delegate = self
         addDoneButtonOnKeyboard()

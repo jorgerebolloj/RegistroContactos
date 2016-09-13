@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		3045A6AF1D86F45C0031B111 /* CustomContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3045A6AE1D86F45C0031B111 /* CustomContactCell.swift */; };
+		3045A6B71D876C1D0031B111 /* ContactInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3045A6B61D876C1D0031B111 /* ContactInfoViewController.swift */; };
+		3045A6B91D8776FF0031B111 /* RegistroContactos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3045A6B81D8776FF0031B111 /* RegistroContactos.swift */; };
+		3045A6BB1D8777440031B111 /* RegistroContactos+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3045A6BA1D8777440031B111 /* RegistroContactos+CoreDataProperties.swift */; };
 		304CDD7C1D8622410017D828 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304CDD7B1D8622410017D828 /* AppDelegate.swift */; };
 		304CDD7E1D8622410017D828 /* ContactListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304CDD7D1D8622410017D828 /* ContactListViewController.swift */; };
 		304CDD801D8622410017D828 /* NewContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304CDD7F1D8622410017D828 /* NewContactViewController.swift */; };
@@ -22,6 +25,9 @@
 
 /* Begin PBXFileReference section */
 		3045A6AE1D86F45C0031B111 /* CustomContactCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomContactCell.swift; sourceTree = "<group>"; };
+		3045A6B61D876C1D0031B111 /* ContactInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactInfoViewController.swift; sourceTree = "<group>"; };
+		3045A6B81D8776FF0031B111 /* RegistroContactos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistroContactos.swift; sourceTree = "<group>"; };
+		3045A6BA1D8777440031B111 /* RegistroContactos+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RegistroContactos+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		304CDD781D8622400017D828 /* RegistroContactos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RegistroContactos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		304CDD7B1D8622410017D828 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		304CDD7D1D8622410017D828 /* ContactListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +80,8 @@
 				304CDD861D8622410017D828 /* LaunchScreen.storyboard */,
 				304CDD981D86D16A0017D828 /* DataModel.xcdatamodeld */,
 				304CDD891D8622410017D828 /* Info.plist */,
+				3045A6B81D8776FF0031B111 /* RegistroContactos.swift */,
+				3045A6BA1D8777440031B111 /* RegistroContactos+CoreDataProperties.swift */,
 			);
 			path = RegistroContactos;
 			sourceTree = "<group>";
@@ -94,6 +102,7 @@
 				304CDD7D1D8622410017D828 /* ContactListViewController.swift */,
 				304CDD7F1D8622410017D828 /* NewContactViewController.swift */,
 				3045A6AE1D86F45C0031B111 /* CustomContactCell.swift */,
+				3045A6B61D876C1D0031B111 /* ContactInfoViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -174,9 +183,12 @@
 			files = (
 				304CDD801D8622410017D828 /* NewContactViewController.swift in Sources */,
 				304CDD9A1D86D16A0017D828 /* DataModel.xcdatamodeld in Sources */,
+				3045A6B91D8776FF0031B111 /* RegistroContactos.swift in Sources */,
 				304CDD7C1D8622410017D828 /* AppDelegate.swift in Sources */,
 				3045A6AF1D86F45C0031B111 /* CustomContactCell.swift in Sources */,
+				3045A6BB1D8777440031B111 /* RegistroContactos+CoreDataProperties.swift in Sources */,
 				304CDD7E1D8622410017D828 /* ContactListViewController.swift in Sources */,
+				3045A6B71D876C1D0031B111 /* ContactInfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
