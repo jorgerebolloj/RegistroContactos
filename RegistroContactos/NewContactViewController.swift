@@ -200,6 +200,7 @@ class NewContactViewController: UIViewController, UITextFieldDelegate, UIPickerV
         }
     }
     
+    // Alert to confirm store new contact
     @IBAction func addContactButtonAction(sender: AnyObject) {
         let alertController = UIAlertController (title: "Nuevo Contacto", message: "Agregar Contacto", preferredStyle:  UIAlertControllerStyle.Alert)
         let storeContact = UIAlertAction(title: "Agregar", style: .Default) { (result : UIAlertAction) -> Void in
@@ -214,6 +215,7 @@ class NewContactViewController: UIViewController, UITextFieldDelegate, UIPickerV
         self.presentViewController(alertController, animated: true, completion: nil)
     }
     
+    // Store new contact
     func saveContact () {
         let mngdObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
         let entityDescription = NSEntityDescription.entityForName("Contactos", inManagedObjectContext: mngdObjectContext)

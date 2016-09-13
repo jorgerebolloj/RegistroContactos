@@ -7,8 +7,18 @@
 //
 
 import UIKit
+import CoreData
 
 class ContactInfoViewController: UIViewController {
+    
+    @IBOutlet weak var contactImage: UIImageView!
+    @IBOutlet weak var contactNameLabel: UILabel!
+    @IBOutlet weak var contactPhoneLabel: UILabel!
+    @IBOutlet weak var contactCivilStatusLabel: UILabel!
+    @IBOutlet weak var contactSexLabel: UILabel!
+    @IBOutlet weak var contactPersonalInterestLabel: UILabel!
+    
+    var contact = NSMutableDictionary()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,7 +26,11 @@ class ContactInfoViewController: UIViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
-        
+        contactNameLabel.text = contact["name"] as? String
+        contactPhoneLabel.text = contact["telephone"] as? String
+        contactCivilStatusLabel.text = contact["civilStatus"] as? String
+        contactSexLabel.text = contact["sex"] as? String
+        contactPersonalInterestLabel.text = contact["personalInterest"] as? String
     }
     
     override func didReceiveMemoryWarning() {

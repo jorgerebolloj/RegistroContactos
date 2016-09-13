@@ -13,6 +13,7 @@ class ContactListViewController: UIViewController, UITableViewDataSource, UITabl
 
     @IBOutlet weak var ContactListTableView: UITableView!
     var contacts = [NSManagedObject]()
+    var currentContact = NSMutableDictionary()
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController!.navigationBar.barTintColor = UIColor.init(colorLiteralRed: 33/255, green: 208/255, blue: 195/255, alpha: 1.0)
@@ -60,6 +61,24 @@ class ContactListViewController: UIViewController, UITableViewDataSource, UITabl
         cell.contactPhoneLabel.text = contact.valueForKey("telephone") as? String
         cell.contactInfoLabel.text = contact.valueForKey("personalInterest") as? String
         return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.performSegueWithIdentifier("showInfo", sender:self)
+        currentContact.setObject((contacts[indexPath.row].valueForKey("name") as? String)!, forKey: "name")
+        currentContact.setObject((contacts[indexPath.row].valueForKey("telephone") as? String)!, forKey: "telephone")
+        currentContact.setObject((contacts[indexPath.row].valueForKey("civilStatus") as? String)!, forKey: "civilStatus")
+        currentContact.setObject((contacts[indexPath.row].valueForKey("sex") as? String)!, forKey: "sex")
+        currentContact.setObject((contacts[indexPath.row].valueForKey("personalInterest") as? String)!, forKey: "personalInterest")
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "showInfo"){
+            if let contactInfoVC = segue.destinationViewController as? ContactInfoViewController {
+                contactInfoVC.contact = currentContact
+            }
+            
+        }
     }
 
 }

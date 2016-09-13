@@ -16,7 +16,7 @@
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C10-93-eJN">
@@ -24,14 +24,14 @@
                                 <color key="backgroundColor" red="0.12941176469999999" green="0.81568627449999997" blue="0.76470588240000004" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WCD-FF-cgm">
-                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="623"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="contactCell" rowHeight="100" id="A4c-ii-3AZ" customClass="CustomContactCell" customModule="RegistroContactos" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="100"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="A4c-ii-3AZ" id="H1s-q9-38t">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="99"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="99"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ContactImage.png" translatesAutoresizingMaskIntoConstraints="NO" id="KSh-3b-bcD">
@@ -41,7 +41,7 @@
                                                         <constraint firstAttribute="width" constant="99" id="bdY-9p-x45"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P4s-w7-BUM">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P4s-w7-BUM">
                                                     <rect key="frame" x="115" y="0.0" width="477" height="42"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="42" id="Nf7-e9-QUr"/>
@@ -59,7 +59,7 @@
                                                     <color key="textColor" red="0.92941176469999998" green="0.72549019609999998" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cJJ-CY-BiF">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cJJ-CY-BiF">
                                                     <rect key="frame" x="259" y="50" width="333" height="42"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="42" id="O33-T4-X3F"/>
@@ -88,7 +88,6 @@
                                             <outlet property="contactInfoLabel" destination="cJJ-CY-BiF" id="pJ9-qb-lnQ"/>
                                             <outlet property="contactNameLabel" destination="P4s-w7-BUM" id="pS8-b0-quL"/>
                                             <outlet property="contactPhoneLabel" destination="rZ1-5u-LBc" id="L81-SS-Za4"/>
-                                            <segue destination="USq-Pr-sQw" kind="show" identifier="showInfo" id="TwY-XX-xf7"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -109,6 +108,7 @@
                     <navigationItem key="navigationItem" id="uPL-Xd-Htu"/>
                     <connections>
                         <outlet property="ContactListTableView" destination="WCD-FF-cgm" id="mRp-7n-FvH"/>
+                        <segue destination="USq-Pr-sQw" kind="show" identifier="showInfo" id="R3z-Va-jMw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
@@ -188,6 +188,14 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="contactCivilStatusLabel" destination="Vfg-Vz-J8B" id="Gg3-Sn-SxI"/>
+                        <outlet property="contactImage" destination="fp2-SN-Erq" id="PF9-sg-Ksa"/>
+                        <outlet property="contactNameLabel" destination="k25-oK-jMO" id="VAs-4r-c7v"/>
+                        <outlet property="contactPersonalInterestLabel" destination="mPb-PN-38l" id="Nrw-Cy-YB0"/>
+                        <outlet property="contactPhoneLabel" destination="cEI-Hg-TES" id="qBc-Gd-PIh"/>
+                        <outlet property="contactSexLabel" destination="Lgm-Ja-2XE" id="bRo-b6-h9i"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iI7-TP-N9D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -202,42 +210,36 @@
                         <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y86-Kr-maI">
-                                <rect key="frame" x="20" y="320" width="560" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Yti-n7-PkG"/>
-                                </constraints>
+                                <rect key="frame" x="20" y="320" width="374" height="30"/>
                                 <color key="textColor" red="0.92941176469999998" green="0.72549019609999998" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="namePhonePad"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CDh-nk-ndr">
-                                <rect key="frame" x="20" y="476" width="560" height="67"/>
+                                <rect key="frame" x="20" y="476" width="374" height="203"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xkG-Ax-q3A">
-                                <rect key="frame" x="20" y="396" width="560" height="72"/>
+                                <rect key="frame" x="20" y="396" width="374" height="72"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="72" id="bzQ-P0-pdg"/>
+                                    <constraint firstAttribute="height" constant="72" id="Hn3-z9-hzV"/>
                                 </constraints>
                             </pickerView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NewContactImage.png" translatesAutoresizingMaskIntoConstraints="NO" id="0EN-Wi-4e5">
-                                <rect key="frame" x="180" y="72" width="240" height="240"/>
+                                <rect key="frame" x="87" y="72" width="240" height="240"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="240" id="LAb-P8-WAr"/>
-                                    <constraint firstAttribute="width" constant="240" id="si1-tB-CZC"/>
+                                    <constraint firstAttribute="width" constant="240" id="DtY-t5-J26"/>
+                                    <constraint firstAttribute="height" constant="240" id="zOS-dv-efM"/>
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Teléfono" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DEv-V3-Ggl">
-                                <rect key="frame" x="20" y="358" width="560" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="5lc-Nl-C37"/>
-                                </constraints>
+                                <rect key="frame" x="20" y="358" width="374" height="30"/>
                                 <color key="textColor" red="0.92941176469999998" green="0.72549019609999998" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
@@ -245,28 +247,27 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="CDh-nk-ndr" secondAttribute="bottom" constant="8" id="0UC-Hm-REG"/>
-                            <constraint firstItem="CDh-nk-ndr" firstAttribute="trailing" secondItem="QS5-Rx-YEW" secondAttribute="trailingMargin" id="4xj-Wh-Kw1"/>
-                            <constraint firstItem="CDh-nk-ndr" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="BXa-vq-6tP"/>
-                            <constraint firstItem="xkG-Ax-q3A" firstAttribute="top" secondItem="DEv-V3-Ggl" secondAttribute="bottom" constant="8" id="EEI-Yh-gG4"/>
-                            <constraint firstItem="0EN-Wi-4e5" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="8" id="FOF-Th-tPn"/>
-                            <constraint firstItem="DEv-V3-Ggl" firstAttribute="top" secondItem="y86-Kr-maI" secondAttribute="bottom" constant="8" id="Faf-od-Jm4"/>
-                            <constraint firstItem="y86-Kr-maI" firstAttribute="trailing" secondItem="QS5-Rx-YEW" secondAttribute="trailingMargin" id="Hf7-fh-ZYg"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="0EN-Wi-4e5" secondAttribute="trailing" constant="160" id="T7c-aJ-9aQ"/>
-                            <constraint firstItem="DEv-V3-Ggl" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="cCD-m7-YXY"/>
-                            <constraint firstItem="0EN-Wi-4e5" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="160" id="hUS-ha-max"/>
-                            <constraint firstItem="y86-Kr-maI" firstAttribute="top" secondItem="0EN-Wi-4e5" secondAttribute="bottom" constant="8" id="iF7-Xu-tDI"/>
-                            <constraint firstItem="y86-Kr-maI" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="jZm-Jx-sEv"/>
-                            <constraint firstItem="xkG-Ax-q3A" firstAttribute="trailing" secondItem="QS5-Rx-YEW" secondAttribute="trailingMargin" id="klp-Zv-EiM"/>
-                            <constraint firstItem="DEv-V3-Ggl" firstAttribute="trailing" secondItem="QS5-Rx-YEW" secondAttribute="trailingMargin" id="weQ-mM-Ai4"/>
-                            <constraint firstItem="xkG-Ax-q3A" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="y5y-7u-K2B"/>
-                            <constraint firstItem="CDh-nk-ndr" firstAttribute="top" secondItem="xkG-Ax-q3A" secondAttribute="bottom" constant="8" id="z0W-Vi-IRM"/>
+                            <constraint firstItem="DEv-V3-Ggl" firstAttribute="top" secondItem="y86-Kr-maI" secondAttribute="bottom" constant="8" id="0SJ-cJ-Azo"/>
+                            <constraint firstItem="xkG-Ax-q3A" firstAttribute="top" secondItem="DEv-V3-Ggl" secondAttribute="bottom" constant="8" id="7jJ-z2-e0L"/>
+                            <constraint firstItem="y86-Kr-maI" firstAttribute="trailing" secondItem="QS5-Rx-YEW" secondAttribute="trailingMargin" id="7us-rp-vkN"/>
+                            <constraint firstItem="CDh-nk-ndr" firstAttribute="trailing" secondItem="QS5-Rx-YEW" secondAttribute="trailingMargin" id="9Ef-9n-Kh3"/>
+                            <constraint firstItem="CDh-nk-ndr" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="AL6-Ty-euL"/>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="CDh-nk-ndr" secondAttribute="bottom" constant="8" id="Bug-uL-NQE"/>
+                            <constraint firstItem="0EN-Wi-4e5" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="Nr6-Hl-if8"/>
+                            <constraint firstItem="y86-Kr-maI" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="RpF-hL-u1s"/>
+                            <constraint firstItem="DEv-V3-Ggl" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="ayV-SO-DOe"/>
+                            <constraint firstItem="DEv-V3-Ggl" firstAttribute="trailing" secondItem="QS5-Rx-YEW" secondAttribute="trailingMargin" id="c0c-gn-Z7X"/>
+                            <constraint firstItem="CDh-nk-ndr" firstAttribute="top" secondItem="xkG-Ax-q3A" secondAttribute="bottom" constant="8" id="gyK-CX-EtT"/>
+                            <constraint firstItem="y86-Kr-maI" firstAttribute="top" secondItem="0EN-Wi-4e5" secondAttribute="bottom" constant="8" id="i1N-dh-F2D"/>
+                            <constraint firstItem="xkG-Ax-q3A" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="nXz-xa-5rX"/>
+                            <constraint firstItem="xkG-Ax-q3A" firstAttribute="trailing" secondItem="QS5-Rx-YEW" secondAttribute="trailingMargin" id="qU2-4X-gui"/>
+                            <constraint firstItem="0EN-Wi-4e5" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="8" id="wot-JC-nL2"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Hnl-eF-wle">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="yze-WT-AVU">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="0Gs-g9-huO">
-                                <rect key="frame" x="509" y="7" width="71" height="30"/>
+                                <rect key="frame" x="323" y="7" width="71" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.34406897009999998" blue="0.29411764709999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -328,6 +329,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RS1-hH-ZxE" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Lista de Contactos" image="ContactList" id="acW-dT-cKf"/>
                     <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="tct-So-6Ae">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -347,6 +349,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WDW-ln-wsz" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Nuevo Contacto" image="NewContact" id="cPa-gy-q4n"/>
                     <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dsA-P6-pqz">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
